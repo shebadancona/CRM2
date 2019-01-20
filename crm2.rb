@@ -83,7 +83,12 @@ my_contact.delete
     p Contact.find_by(a,b)
   end
 
-
+ 
 end
+
+     at_exit do
+    ActiveRecord::Base.connection.close
+      end
+
 a = CRM.new
 a.main_menu
