@@ -50,7 +50,7 @@ end
     print 'Enter a Note: '
     note = gets.chomp
 
-   contact = Contact.create(first_name: first_name, last_name: last_name, email: email, note: note)
+   contact = Contact.create(first_name: first_name, last_name: last_name, email: email, note:note)
   end
 
   def modify_existing_contact
@@ -61,7 +61,7 @@ puts " enter the attribute you'd like to modify"
 b = gets.chomp
 puts "enter new value"
 c = gets.chomp
-my_contact.update(b,c)
+my_contact.update(b => c)
   end
 
   def delete_contact
